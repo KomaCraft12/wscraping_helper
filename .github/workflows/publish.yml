@@ -1,0 +1,26 @@
+name: Publish
+
+on:
+  push:
+    branches:
+      - main  # A publikálást a 'main' ág push eseménye indítja, módosítsd a szükségleteidnek megfelelően.
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest  # A futtatási környezetet a 'ubuntu-latest' operációs rendszerre állítsd be.
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v2  # A repository frissítéséhez használja a 'actions/checkout' műveletet.
+
+      # Itt folytathatod a további lépéseket, például a build folyamatot, a teszteket vagy a deploy-t.
+
+      - name: Publish Website
+        run: |
+          # Itt helyezd el a publikálási lépéseket, például a fájlok másolását vagy az API hívásokat.
+          # Például:
+          # cp -R public/* docs/
+          # curl -X POST -H "Content-Type: application/json" -d '{"message":"Website published"}' https://api.example.com/publish
+
+      # További lépések, mint például értesítések vagy más konfigurációk hozzáadása
+
